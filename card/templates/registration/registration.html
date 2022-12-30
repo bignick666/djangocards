@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>REGISTER PLEASE</h1>
+
+    {% if form.errors %}
+        <p>Your username and password didn't match.Please try again</p>
+    {% else %}
+        <p>Please, use the following form to log-in. If you don't have an account please use it</p>
+    {% endif %}
+
+    <form action="." method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Done"></p>
+    </form>
+</body>
+</html>

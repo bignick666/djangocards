@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>
+    {% if request.user.is_authenticated %}
+        Hello, {{ request.user.first_name }} &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'card:logout' %}"><button>Logout</button></a> &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'card:cards' %}"><button>My cards</button></a>
+        {% else %}
+        <a href="{% url 'card:login' %}"><button>Login</button></a>&nbsp; &nbsp;
+        <a href="{% url 'card:register' %}"><button>Registration</button></a>&nbsp; &nbsp;
+    {% endif %}
+</span>
+</body>
+</html>
