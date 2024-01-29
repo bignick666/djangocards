@@ -1,5 +1,3 @@
-# djangocards
-<ul>
-  <li>1</li>
-  <li>2</li>
-</ul>
+<h1>
+  Djangocards - Тестовое задание. CRUD - для банковских карточек
+</h1>
